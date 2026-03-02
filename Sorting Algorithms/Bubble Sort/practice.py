@@ -1,0 +1,37 @@
+
+#  Simple Bubble Sort
+
+def bubble_sort(data_list):
+    for r in range(1,len(data_list)):
+        for i in range(len(data_list)-r):
+            if data_list[i]>data_list[i+1]:
+                data_list[i],data_list[i+1]=data_list[i+1],data_list[i]
+
+
+l=[45,24,76,82,11,56]
+bubble_sort(l)
+print(l)
+
+
+#  Modified Bubble Sort
+
+def m_bubble_sort(data_list):
+    flag=False
+    for r in range(1,len(data_list)):
+        flag=False
+        for i in range(len(data_list)-r):
+            if data_list[i]>data_list[i+1]:
+                data_list[i],data_list[i+1]=data_list[i+1],data_list[i]
+                flag=True
+        
+        if not flag:
+            break
+
+
+l=[45,24,76,82,11,56]
+m_bubble_sort(l)
+print(l)
+
+
+for r in range(len(l)):
+    print(r)
